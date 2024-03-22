@@ -1,0 +1,33 @@
+﻿@page "/game-form"
+@page "/game-form/{Id:int}"
+@using BlazorCrud.Services
+@inject IGameService GameService
+@inject NavigationManager NavigationManager
+
+@if (Id > 0)
+{
+    <h3>Edit Game</h3>
+}
+else
+{
+    <h3>Add Game</h3>
+}
+<EditForm Model="Game" OnSubmit="HandleSubmit" FormName="GameForm">
+    <label>Name: </label>
+    <InputText @bind-Value=Game!.Name />
+    <input type="submit" class="btn btn-primary" />
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    [SupplyParameterFromForm]
+    public Game Game { get; set; } = new Game { Name = "" };
+
+    async Task HandleSubmit()
+    {
+        await GameService.AddGame(Game);
+
+        NavigationManager.NavigateTo("games");
+    }
+}
