@@ -1,4 +1,4 @@
-﻿using BlazorCrud.Entities;
+﻿using BlazorCrud.Data.Entities;
 
 namespace BlazorCrud.Services
 {

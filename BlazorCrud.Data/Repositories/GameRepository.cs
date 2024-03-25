@@ -1,8 +1,8 @@
 ﻿using BlazorCrud.Data;
-using BlazorCrud.Entities;
+using BlazorCrud.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorCrud.Repositories
+namespace BlazorCrud.Data.Repositories
 {
     public class GameRepository(DataContext context) : IGameRepository
     {

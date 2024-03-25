@@ -1,4 +1,4 @@
-﻿namespace BlazorCrud.Entities
+﻿namespace BlazorCrud.Data.Entities
 {
     public class Game
     {

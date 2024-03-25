@@ -1,5 +1,5 @@
-﻿using BlazorCrud.Entities;
-using BlazorCrud.Repositories;
+﻿using BlazorCrud.Data.Entities;
+using BlazorCrud.Data.Repositories;
 
 namespace BlazorCrud.Services
 {

@@ -8,6 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\BlazorCrud.Data\BlazorCrud.Data.csproj" />
+		<ProjectReference Include="..\..\BlazorCrud.Services\BlazorCrud.Services.csproj" />
 		<ProjectReference Include="..\BlazorCrud.Client\BlazorCrud.Client.csproj" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />

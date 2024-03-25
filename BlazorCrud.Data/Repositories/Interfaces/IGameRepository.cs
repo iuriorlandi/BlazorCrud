@@ -1,6 +1,6 @@
-﻿using BlazorCrud.Entities;
+﻿using BlazorCrud.Data.Entities;
 
-namespace BlazorCrud.Repositories
+namespace BlazorCrud.Data.Repositories
 {
     public interface IGameRepository
     {

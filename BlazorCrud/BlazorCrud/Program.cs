@@ -1,6 +1,6 @@
 using BlazorCrud.Components;
 using BlazorCrud.Data;
-using BlazorCrud.Repositories;
+using BlazorCrud.Data.Repositories;
 using BlazorCrud.Services;
 using Microsoft.EntityFrameworkCore;
 

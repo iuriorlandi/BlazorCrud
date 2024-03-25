@@ -1,4 +1,4 @@
-﻿using BlazorCrud.Entities;
+﻿using BlazorCrud.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlazorCrud.Data
@@ -14,7 +14,7 @@ namespace BlazorCrud.Data
                 entity.ToTable("games");
                 entity.HasKey(g => g.Id);
                 entity.Property(g => g.Id).HasColumnName("id");
-                entity.Property(g => g.Name).HasJsonPropertyName("name");
+                entity.Property(g => g.Name).HasColumnName("name");
             });
 
             base.OnModelCreating(modelBuilder);
