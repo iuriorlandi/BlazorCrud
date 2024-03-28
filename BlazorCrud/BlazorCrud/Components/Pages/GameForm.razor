@@ -3,10 +3,11 @@
 @using BlazorCrud.Services
 @inject IGameService GameService
 @inject NavigationManager NavigationManager
+@rendermode InteractiveAuto
 
-@if (Id > 0)
+@if (UpdateGame())
 {
-    <h3>Edit Game</h3>
+    <h3>Edit @Game.Name</h3>
 }
 else
 {
@@ -14,7 +15,7 @@ else
 }
 <EditForm Model="Game" OnSubmit="HandleSubmit" FormName="GameForm">
     <label>Name: </label>
-    <InputText @bind-Value=Game!.Name />
+    <InputText @bind-Value=Game.Name>@Game.Name</InputText>
     <input type="submit" class="btn btn-primary" />
 </EditForm>
 
@@ -26,8 +27,19 @@ else
 
     async Task HandleSubmit()
     {
-        await GameService.AddGame(Game);
+        if (UpdateGame())
+            await GameService.UpdateGame(Game);
+        else
+            await GameService.AddGame(Game);
 
         NavigationManager.NavigateTo("games");
+    }
+
+    bool UpdateGame() => Id > 0;
+    
+    protected override async Task OnParametersSetAsync()
+    {
+        if (UpdateGame())
+            Game = await GameService.GetGameById(Id);
     }
 }

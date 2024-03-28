@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCrud", "BlazorCrud\Bl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCrud.Client", "BlazorCrud\BlazorCrud.Client\BlazorCrud.Client.csproj", "{48DF6A35-90D7-4FCE-A714-054A2DFEEE6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCrud.Data", "BlazorCrud.Data\BlazorCrud.Data.csproj", "{52B60F72-B0CA-4E3A-B151-103726C4B660}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCrud.Data", "BlazorCrud.Data\BlazorCrud.Data.csproj", "{52B60F72-B0CA-4E3A-B151-103726C4B660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCrud.Services", "BlazorCrud.Services\BlazorCrud.Services.csproj", "{53016EB2-D09C-496A-BEA3-F9DE0D3F1232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCrud.Services", "BlazorCrud.Services\BlazorCrud.Services.csproj", "{53016EB2-D09C-496A-BEA3-F9DE0D3F1232}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
